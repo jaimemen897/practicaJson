@@ -11,6 +11,8 @@ import java.io.Reader;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Comparator;
+import java.util.Optional;
 
 public class PokemonController {
     private static PokemonController instance;
@@ -47,5 +49,10 @@ public class PokemonController {
 
     public Pokemon getPokemon(int index) {
         return pokedex.getPokemon().get(index);
+    }
+
+    /*Pokemon con el nombre más largo*/
+    public Optional<Pokemon> getLongestNamePokemon() {
+        return pokedex.getPokemon().stream().max(Comparator.comparingInt(p -> p.getName().length()));
     }
 }

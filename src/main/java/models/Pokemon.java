@@ -1,9 +1,11 @@
 package models;
 
+import com.google.gson.annotations.SerializedName;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
 
 import java.util.List;
+
 @ToString
 @EqualsAndHashCode
 public class Pokemon {
@@ -15,14 +17,20 @@ public class Pokemon {
     private List<String> type;
     private List<String> weaknesses;
     private String name;
+    @SerializedName("avg_spawns")
     private int avgSpawns;
     private List<Object> multipliers;
     private int id;
+    @SerializedName("spawn_time")
     private String spawnTime;
     private String height;
+    @SerializedName("spawn_chance")
     private Object spawnChance;
+    @SerializedName("prev_evolution")
     private List<PrevEvolutionItem> prevEvolution;
+    @SerializedName("candy_count")
     private int candyCount;
+    @SerializedName("next_evolution")
     private List<NextEvolutionItem> nextEvolution;
 
     public String getImg() {
