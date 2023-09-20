@@ -4,17 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="41bd18c0-fde6-4f68-9017-612a2cdff49d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pokemon2de2/LeerJson.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pokemon2de2/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="41bd18c0-fde6-4f68-9017-612a2cdff49d" name="Changes" comment="obtenerNombre y leerJson">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/PokemonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/PokemonController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/Pokedex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Pokedex.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/Pokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Pokemon.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,8 +109,18 @@
       <workItem from="1695206789548" duration="59000" />
       <workItem from="1695206869993" duration="116000" />
       <workItem from="1695207001288" duration="215000" />
-      <workItem from="1695207246148" duration="3392000" />
+      <workItem from="1695207246148" duration="3682000" />
+      <workItem from="1695216283849" duration="40000" />
     </task>
+    <task id="LOCAL-00001" summary="obtenerNombre y leerJson">
+      <option name="closed" value="true" />
+      <created>1695210908173</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1695210908173</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -127,16 +128,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/pokemon2de2/Main.java</url>
-          <line>13</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="obtenerNombre y leerJson" />
+    <option name="LAST_COMMIT_MESSAGE" value="obtenerNombre y leerJson" />
   </component>
 </project>
