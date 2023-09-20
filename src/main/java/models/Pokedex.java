@@ -1,5 +1,7 @@
 package models;
 
-public class Pokedex {
+import java.util.ArrayList;
 
+public class Pokedex {
+    public ArrayList<Pokemon> pokemon;
 }

@@ -4,6 +4,30 @@ import java.util.List;
 
 public class Pokemon {
     private String img;
+
+    @Override
+    public String toString() {
+        return "Pokemon{" +
+                "img='" + img + '\'' +
+                ", egg='" + egg + '\'' +
+                ", candy='" + candy + '\'' +
+                ", num='" + num + '\'' +
+                ", weight='" + weight + '\'' +
+                ", type=" + type +
+                ", weaknesses=" + weaknesses +
+                ", name='" + name + '\'' +
+                ", avgSpawns=" + avgSpawns +
+                ", multipliers=" + multipliers +
+                ", id=" + id +
+                ", spawnTime='" + spawnTime + '\'' +
+                ", height='" + height + '\'' +
+                ", spawnChance=" + spawnChance +
+                ", prevEvolution=" + prevEvolution +
+                ", candyCount=" + candyCount +
+                ", nextEvolution=" + nextEvolution +
+                '}';
+    }
+
     private String egg;
     private String candy;
     private String num;
@@ -88,4 +112,5 @@ public class Pokemon {
     public List<NextEvolutionItem> getNextEvolution() {
         return nextEvolution;
     }
+
 }
