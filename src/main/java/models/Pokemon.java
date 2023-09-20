@@ -1,7 +1,11 @@
 package models;
 
-import java.util.List;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
 
+import java.util.List;
+@ToString
+@EqualsAndHashCode
 public class Pokemon {
     private String img;
     private String egg;
