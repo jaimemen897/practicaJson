@@ -135,8 +135,6 @@ public class PokemonController {
                 .toList();
     }
 
-}
-
     /*Pokemon con el nombre más largo*/
     public Optional<Pokemon> getLongestNamePokemon() {
         return pokedex.getPokemon().stream()
