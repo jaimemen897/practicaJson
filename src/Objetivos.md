@@ -2,30 +2,30 @@ Leer el fichero de datos de pokemons del tipo JSON
 
 Tras leerlo usando la api de colecciones funcional, obtener:
 
--[ ] Obtener el nombre los 10 primeros pokemons.
--[ ] Obtener el nombre de los 5 ultimos pokemons.
--[ ] Obtener los datos de Pikachu.
--[ ] Obtener la evolucion de Charmander.
--[ ] Obtener el nombre de los pokemons de tipo fire.
--[ ] Obtener el nombre de los pokemons con debilidad water o electric.
--[ ] Numero de pokemons con solo una debilidad.
--[ ] Pokemon con más debilidades.
--[ ] Pokemon con menos evoluciones.
--[ ] Pokemon con una evolucion que no es de tipo fire.
--[ ] Pokemon más pesado.
--[ ] Pokemon más alto.
+-[x] Obtener el nombre los 10 primeros pokemons.
+-[x] Obtener el nombre de los 5 ultimos pokemons.
+-[x] Obtener los datos de Pikachu.
+-[x] Obtener la evolucion de Charmander.
+-[x] Obtener el nombre de los pokemons de tipo fire.
+-[x] Obtener el nombre de los pokemons con debilidad water o electric.
+-[x] Numero de pokemons con solo una debilidad.
+-[x] Pokemon con más debilidades.
+-[x] Pokemon con menos evoluciones.
+-[x] Pokemon con una evolucion que no es de tipo fire.
+-[x] Pokemon más pesado.
+-[x] Pokemon más alto.
 -[x] Pokemon con el nombre mas largo.
--[ ] Media de peso de los pokemons.
--[ ] Media de altura de los pokemons.
--[ ] Media de evoluciones de los pokemons.
--[ ] Media de debilidades de los pokemons.
--[ ] Pokemons agrupados por tipo.
--[ ] Numero de pokemons agrupados por debilidad.
+-[x] Media de peso de los pokemons.
+-[x] Media de altura de los pokemons.
+-[x] Media de evoluciones de los pokemons.
+-[x] Media de debilidades de los pokemons.
+-[x] Pokemons agrupados por tipo.
+-[x] Numero de pokemons agrupados por debilidad.
 -[ ] Pokemons agrupados por numero de evoluciones.
 -[ ] Sacar la debilidad más común
--[ ] Exporta a csv los siguintes datos de pokemons: id, num, name, height, width.
-
-Lee el fichero que has exportado y sácalo por pantalla
+-[x] Exporta a csv los siguintes datos de pokemons: id, num, name, height, width. 
+-[x] Lee el fichero que has exportado y sácalo por pantalla
+-[ ] Hacer el ejecutable
 
 Introduce los datos que has importado de un CSV en una base de datos en fichero como H2 o SQLite y luego realiza un select para ver el resultado de las operaciones. Los datos de conexión deben estar encapsulados en un manejador y leídos de un fichero de propiedades o de entorno.
 

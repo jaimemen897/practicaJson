@@ -2,12 +2,16 @@ package models;
 
 import com.google.gson.annotations.SerializedName;
 import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
 import lombok.ToString;
 
 import java.util.List;
 
 @ToString
 @EqualsAndHashCode
+@Getter
+@Setter
 public class Pokemon {
     private String img;
 
@@ -42,7 +46,7 @@ public class Pokemon {
     private List<String> weaknesses;
     private String name;
     @SerializedName("avg_spawns")
-    private int avgSpawns;
+    private double avgSpawns;
     private List<Object> multipliers;
     private int id;
     @SerializedName("spawn_time")
@@ -57,72 +61,19 @@ public class Pokemon {
     @SerializedName("next_evolution")
     private List<NextEvolutionItem> nextEvolution;
 
-    public String getImg() {
-        return img;
+    public double getWeight() {
+        String[] split = weight.split(" ");
+        return Double.parseDouble(split[0]);
     }
 
-    public String getEgg() {
-        return egg;
+    public double getHeight() {
+        String[] split = height.split(" ");
+        return Double.parseDouble(split[0]);
     }
 
-    public String getCandy() {
-        return candy;
-    }
-
-    public String getNum() {
-        return num;
-    }
-
-    public String getWeight() {
-        return weight;
-    }
-
-    public List<String> getType() {
-        return type;
-    }
-
-    public List<String> getWeaknesses() {
-        return weaknesses;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public int getAvgSpawns() {
-        return avgSpawns;
-    }
-
-    public List<Object> getMultipliers() {
-        return multipliers;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public String getSpawnTime() {
-        return spawnTime;
-    }
-
-    public String getHeight() {
-        return height;
-    }
-
-    public Object getSpawnChance() {
-        return spawnChance;
-    }
-
-    public List<PrevEvolutionItem> getPrevEvolution() {
-        return prevEvolution;
-    }
-
-    public int getCandyCount() {
-        return candyCount;
-    }
-
-    public List<NextEvolutionItem> getNextEvolution() {
-        return nextEvolution;
+    /*Devuelve el id, num, name, height y weight separados por ; para usarlos al imprimir el CSV*/
+    public String toCSV() {
+        return id + ";" + num + ";" + name + ";" + height + ";" + weight;
     }
 
 }
