@@ -4,34 +4,37 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="41bd18c0-fde6-4f68-9017-612a2cdff49d" name="Changes" comment="Primer commit">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Objetivos.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/pokemon.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/PokemonController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/NextEvolutionItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/Pokedex.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/Pokemon.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/PrevEvolutionItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/Response.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-    </list>
+    <list default="true" id="8053052e-f744-4533-8fdd-851bb2ba3d12" name="Changes" comment="pokemonController once primeros metodos acabados" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExportToHTMLSettings">
+    <option name="OPEN_IN_BROWSER" value="true" />
+    <option name="OUTPUT_DIRECTORY" value="C:\Users\Eva\Documents\2daw\dwservidor\ProyectoJSON\practicaJson\htmlReport" />
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="AnnotationType" />
+        <option value="JUnit5 Test Class" />
         <option value="Class" />
       </list>
     </option>
@@ -39,86 +42,154 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="pokemon1de2" />
+        <entry key="$PROJECT_DIR$" value="feature/pokemon2de2" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "jaimemen897"
-  }
-}]]></component>
-  <component name="GithubPullRequestsUISettings">
-    <option name="selectedUrlAndAccountId">
-      <UrlAndAccount>
-        <option name="accountId" value="4caac86f-8e80-40f2-b1fb-803c945e16d6" />
-        <option name="url" value="https://github.com/jaimemen897/practicaJson.git" />
-      </UrlAndAccount>
-    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 2
 }</component>
-  <component name="ProjectId" id="2VcxXG1omTrgzXfK9jdPaJx3hn1" />
+  <component name="ProjectId" id="2VfLywtyFpcKjU70uTWFgWQ5SdH" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
-    <option name="showExcludedFiles" value="false" />
+    <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "develop",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "create.test.in.the.same.root": "true",
+    "git-widget-placeholder": "feature/pokemon2de2",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/Jaime/Downloads/Clase2/DWServidor/ProyectoJson/ProyectoJson/src",
+    "last_opened_file_path": "C:/Users/Eva/Documents/2daw/dwservidor/ProyectoJSON/practicaJson/settings.gradle.kts",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
+    <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Jaime\Downloads\Clase2\DWServidor\ProyectoJson\ProyectoJson\src" />
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="controllers" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Jaime\Downloads\Clase2\DWServidor\ProyectoJson\ProyectoJson\src\data" />
-    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="ProyectoJson.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="exportToCSV" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="pokemon2de2.exportToCSV" />
+      <module name="ProyectoJson.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pokemon2de2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PokemonControllerTest1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ProyectoJson.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="controllers" />
+      <option name="MAIN_CLASS_NAME" value="controllers.PokemonControllerTest1" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PokemonControllerTest1.getPokemon" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ProyectoJson.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="controllers" />
+      <option name="MAIN_CLASS_NAME" value="controllers.PokemonControllerTest1" />
+      <option name="METHOD_NAME" value="getPokemon" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PokemonControllerTest1.onlyOneWeakness" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ProyectoJson.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="controllers" />
+      <option name="MAIN_CLASS_NAME" value="controllers.PokemonControllerTest1" />
+      <option name="METHOD_NAME" value="onlyOneWeakness" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.PokemonControllerTest1.onlyOneWeakness" />
+        <item itemvalue="JUnit.PokemonControllerTest1.getPokemon" />
+        <item itemvalue="JUnit.PokemonControllerTest1" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.exportToCSV" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="41bd18c0-fde6-4f68-9017-612a2cdff49d" name="Changes" comment="" />
-      <created>1695149207966</created>
+      <changelist id="8053052e-f744-4533-8fdd-851bb2ba3d12" name="Changes" comment="" />
+      <created>1695222450991</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1695149207966</updated>
-      <workItem from="1695149209076" duration="487000" />
-      <workItem from="1695198286022" duration="2757000" />
+      <updated>1695222450991</updated>
+      <workItem from="1695222456946" duration="2893000" />
+      <workItem from="1695227617747" duration="5670000" />
+      <workItem from="1695233357826" duration="2686000" />
+      <workItem from="1695286186161" duration="1750000" />
+      <workItem from="1695287973908" duration="11763000" />
+      <workItem from="1695306255080" duration="2944000" />
+      <workItem from="1695319491134" duration="1494000" />
     </task>
-    <task id="LOCAL-00001" summary="Primer commit">
+    <task id="LOCAL-00001" summary="pokemonController once primeros metodos acabados">
       <option name="closed" value="true" />
-      <created>1695149254519</created>
+      <created>1695320332493</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1695149254519</updated>
+      <updated>1695320332493</updated>
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
@@ -126,9 +197,24 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Primer commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Primer commit" />
+    <MESSAGE value="pokemonController once primeros metodos acabados" />
+    <option name="LAST_COMMIT_MESSAGE" value="pokemonController once primeros metodos acabados" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/ProyectoJson$PokemonControllerTest_onlyOneWeakness.ic" NAME="PokemonControllerTest.onlyOneWeakness Coverage Results" MODIFIED="1695291053324" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>controllers.*</FILTER>
+    </SUITE>
   </component>
 </project>

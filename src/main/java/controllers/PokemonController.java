@@ -3,6 +3,7 @@ package controllers;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
+import models.NextEvolutionItem;
 import models.Pokedex;
 import models.Pokemon;
 
@@ -50,6 +51,91 @@ public class PokemonController {
     public Pokemon getPokemon(int index) {
         return pokedex.getPokemon().get(index);
     }
+
+    public List<String> tenFirstNames() {
+        return pokedex.getPokemon().stream()
+                .limit(10)
+                .map(Pokemon::getName)
+                .toList();
+    }
+
+    public List<String> fiveLastNames() {
+        return pokedex.getPokemon().stream()
+                .skip(pokedex.getPokemon().size() - 5)
+                .map(Pokemon::getName)
+                .toList();
+    }
+
+    public List<Pokemon> pikachuData() {
+        return pokedex.getPokemon().stream()
+                .filter(pokemon -> pokemon.getName().equals("Pikachu"))
+                .toList();
+    }
+
+    public List<String> charmanderEvolution() {
+        return pokedex.getPokemon().stream()
+                .filter(pokemon -> pokemon.getNextEvolution() != null)
+                .filter(pokemon -> pokemon.getName().equals("Charmander"))
+                .map(Pokemon::getNextEvolution)
+                .flatMap(pokemon -> pokemon.stream()
+                        .map(NextEvolutionItem::getName))
+                .toList();
+    }
+
+    public List<String> fireType() {
+        return pokedex.getPokemon().stream()
+                .filter(pokemon -> pokemon.getType().contains("Fire"))
+                .map(pokemon -> pokemon.getName() + " " + pokemon.getType())
+                .toList();
+    }
+
+    public List<String> weaknessesWorE() {
+        return pokedex.getPokemon().stream()
+                .filter(pokemon -> pokemon.getWeaknesses().contains("Water") || pokemon.getWeaknesses().contains("Electric"))
+                .map(pokemon -> pokemon.getName() + " " + pokemon.getWeaknesses())
+                .toList();
+    }
+
+    public long onlyOneWeakness() {
+        return pokedex.getPokemon().stream()
+                .filter(pokemon -> pokemon.getWeaknesses().size() == 1)
+                .count();
+    }
+
+    public List<String> pokemonWithMaxWeaknesses() {
+        return pokedex.getPokemon().stream()
+                .sorted((pokemon1, pokemon2) -> pokemon2.getWeaknesses().size() - pokemon1.getWeaknesses().size())
+                .limit(1)
+                .map(pokemon -> pokemon.getName() + " " + pokemon.getWeaknesses())
+                .toList();
+    }
+
+    public List<String> pokemonWithMinEvolutions() {
+        return pokedex.getPokemon().stream()
+                .filter(pokemon -> pokemon.getNextEvolution() != null)
+                .sorted(Comparator.comparingInt(pokemon -> pokemon.getNextEvolution().size()))
+                .limit(1)
+                .map(Pokemon::getName)
+                .toList();
+    }
+
+    public List<String> heaviestPokemon() {
+        return pokedex.getPokemon().stream()
+                .sorted(Comparator.comparingDouble(Pokemon::getWeight).reversed())
+                .limit(1)
+                .map(pokemon -> pokemon.getName() + " " + pokemon.getWeight())
+                .toList();
+    }
+
+    public List<String> tallestPokemon() {
+        return pokedex.getPokemon().stream()
+                .sorted(Comparator.comparingDouble(Pokemon::getHeight).reversed())
+                .limit(1)
+                .map(pokemon -> pokemon.getName() + " " + pokemon.getHeight())
+                .toList();
+    }
+
+}
 
     /*Pokemon con el nombre más largo*/
     public Optional<Pokemon> getLongestNamePokemon() {
