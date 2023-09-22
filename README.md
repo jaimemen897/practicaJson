@@ -27,8 +27,21 @@
  > sera tipo List<String>.
  > - **public List<String> fiveLastNames()**. Este método es muy parecido, pero al querer los 5 últimos nombres el cambio que haremos será omitir con un skip
  > todos los pokemons menos los cinco últimos, restamos al total de la lista 5, por lo que nos quedaría el skip de todos los pokemon menos esos 5 restados.
- > - **public List<Pokemon> pikachuData()**. Mostramos por pantalla los datos de Pikachu, por lo que el método ya no será de tipo String, sino una lista de Pokemons,
+ > - **public Pokemon pikachuData()**. Mostramos por pantalla los datos de Pikachu, por lo que el método ya no será de tipo String, sino una lista de Pokemons,
  > filtramos por nombre y lo añadimos a la lista para mostrarlo.
- > - **public List<String> charmanderEvolution()**. Mostramos las evoluciones de un pokemon, en este caso Charmander. Para ello debemos filtrar por evolución no null,
- > ya que si es null no podrá mostrarse, y por nombre, en este caso Charmander. Con un map devolvemos la lista de evoluciones (nextEvolution) por cada pokemon que cumpla
- > las condiciones anteriores, y con un flatMap extraemos solo el nombre de las evoluciones, finalmente lo devolvemos en una lista.
+ > - **public List<Pokemon> charmanderEvolution()**
+ > - **public List<String> fireType()**. Sacamos por pantalla los nombres de todos los pokemon que sean de tipo fuego, para ello filtamos por tipo con un .contains() ya que
+ > los tipos estan guardados en una lista.
+ > - **public List<String> weaknessesWorE()**. Sacamos por pantalla los nombres de todos los pokemon con debilidades agua o electricidad, como las debilidades están 
+ > guardadas en una lista volvemos a compararlas con el .contains(), al ser una debilidad u otra separamos por barras (||).
+ > - **public long onlyOneWeakness()**. Sacamos por pantalla el número de pokemon con solo una debilidad, para ello simplemente filtraremos la debilidad a la que sea
+ > igual a 1, las contamos con .count() y devolvemos un long.
+ > - **public String pokemonWithMaxWeaknesses()**. Devolvemos el nombre del pokemon con más debilidades, para ello usamos .max() para que devuelva el valor más alto y 
+ > dentro comparamos las debilidades con Comparator.comparingInt()
+ > - **public String pokemonWithMinEvolutions()**. Sacamos por pantalla el nombre del pokemon con menos evoluciones, este método sería igual que el anterior pero esta 
+ > vez usariamos .min() para obtener el valor mínimo. 
+ > - **public List<String> evolutionNotFire()**.
+ > - **public String heaviestPokemon()**. Sacamos por pantalla el pokemon más pesado, usamos .max() y dentro comparamos los pesos de los pokemon con 
+ > Comparator.comparingDouble() y lo metemos en la lista para sacarlo por pantalla.
+ > - **public String tallestPokemon()**. Este método sería igual que el anterior pero comparando alturas.
+ >  - **public Optional<Pokemon> getLongestNamePokemon()**.
