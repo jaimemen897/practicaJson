@@ -3,7 +3,7 @@ package controllers;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
-import models.NextEvolutionItem;
+import lombok.Getter;
 import models.Pokedex;
 import models.Pokemon;
 
@@ -16,6 +16,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+@Getter
 public class PokemonController {
     private static PokemonController instance;
     private Pokedex pokedex;
@@ -48,10 +49,6 @@ public class PokemonController {
         }
     }
 
-    public Pokemon getPokemon(int index) {
-        return pokedex.getPokemon().get(index);
-    }
-
     public List<String> tenFirstNames() {
         return pokedex.getPokemon().stream()
                 .limit(10)
@@ -66,21 +63,23 @@ public class PokemonController {
                 .toList();
     }
 
-    public List<Pokemon> pikachuData() {
+    public Pokemon pikachuData() {
         return pokedex.getPokemon().stream()
                 .filter(pokemon -> pokemon.getName().equals("Pikachu"))
-                .toList();
+                .findFirst()
+                .orElse(null);
     }
 
-    public List<String> charmanderEvolution() {
+    /*Obtener la evolucion de Charmander.*/
+    /*Ahora mismo devuelve todo el rato charmander, y el segundo filter lo único que hace es hacer que devuelva
+    * charmander si su getNum es igual al getNum de su lista NextEvolution*/
+    /*public List<Pokemon> charmanderEvolution() {
         return pokedex.getPokemon().stream()
-                .filter(pokemon -> pokemon.getNextEvolution() != null)
                 .filter(pokemon -> pokemon.getName().equals("Charmander"))
-                .map(Pokemon::getNextEvolution)
-                .flatMap(pokemon -> pokemon.stream()
-                        .map(NextEvolutionItem::getName))
-                .toList();
-    }
+                .filter(pokemon -> pokemon.getNextEvolution().stream()
+                        .anyMatch(pokedex.getPokemon().stream()
+                                .filter(pokemon1 -> pokemon1.getNum().equals(pokemon.getNextEvolution().get(0).getNum())).toList();
+    }*/
 
     public List<String> fireType() {
         return pokedex.getPokemon().stream()
@@ -136,9 +135,11 @@ public class PokemonController {
     }
 
     /*Pokemon con el nombre más largo*/
-    public Optional<Pokemon> getLongestNamePokemon() {
+    public String getLongestNamePokemon() {
         return pokedex.getPokemon().stream()
-                .max(Comparator.comparingInt(p -> p.getName().length()));
+                .max(Comparator.comparingInt(pokemon -> pokemon.getName().length()))
+                .map(Pokemon::getName)
+                .orElse("");
     }
 
     /*Media de peso de los pokemon*/
@@ -164,7 +165,7 @@ public class PokemonController {
                 .filter(pokemon -> pokemon.getNextEvolution() != null)
                 .mapToDouble(pokemon -> pokemon.getNextEvolution().size())
                 .average()
-                .orElse(0.0);
+                .orElse(0);
 
     }
 
@@ -191,14 +192,6 @@ public class PokemonController {
                 .flatMap(pokemon -> pokemon.getWeaknesses().stream().map(weakness -> new AbstractMap.SimpleEntry<>(weakness, pokemon)))
                 .collect(Collectors.groupingBy(Map.Entry::getKey, Collectors.counting()));
     }
-
-    /*Pokemon agrupados por numero de evoluciones*/
-    /*public Map<Integer, List<Pokemon>> getPokemonByNumberOfEvolutions() {
-        return pokedex.getPokemon().stream()
-                .flatMap(pokemon -> pokemon.getNextEvolution().stream().map(evolution -> new AbstractMap.SimpleEntry<>(evolution.getNum(), pokemon)))
-                .collect(Collectors.groupingBy(Map.Entry::getKey,
-                        Collectors.mapping(Map.Entry::getValue, Collectors.toList())));
-    }*/
 
     /*Sacar la debilidad más común*/
     public List<String> getMostCommonWeakness() {
