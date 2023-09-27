@@ -1,0 +1,271 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=windows-1252"> 
+  <title>Coverage Report > PokemonController</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">controllers</a>
+</div>
+
+<h1>Coverage Summary for Class: PokemonController (controllers)</h1>
+
+<table class="coverageStats">
+
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">PokemonController</td>
+<td class="coverageStat">
+  <span class="percent">
+    25%
+  </span>
+  <span class="absValue">
+    (4/16)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    26,5%
+  </span>
+  <span class="absValue">
+    (18/68)
+  </span>
+</td>
+</tr>
+  <tr>
+    <td class="name">PokemonController$1</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+  </tr>
+<tr>
+  <td class="name"><strong>Total</strong></td>
+<td class="coverageStat">
+  <span class="percent">
+    29,4%
+  </span>
+  <span class="absValue">
+    (5/17)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    27,5%
+  </span>
+  <span class="absValue">
+    (19/69)
+  </span>
+</td>
+</tr>
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package controllers;
+&nbsp;
+&nbsp;import com.google.gson.Gson;
+&nbsp;import com.google.gson.GsonBuilder;
+&nbsp;import com.google.gson.reflect.TypeToken;
+&nbsp;import models.NextEvolutionItem;
+&nbsp;import models.Pokedex;
+&nbsp;import models.Pokemon;
+&nbsp;
+&nbsp;import java.io.File;
+&nbsp;import java.io.Reader;
+&nbsp;import java.nio.file.Files;
+&nbsp;import java.nio.file.Path;
+&nbsp;import java.nio.file.Paths;
+&nbsp;import java.util.ArrayList;
+&nbsp;import java.util.Comparator;
+&nbsp;import java.util.List;
+&nbsp;import java.util.stream.Collectors;
+&nbsp;
+&nbsp;public class PokemonController {
+&nbsp;    private static PokemonController instance;
+&nbsp;    private Pokedex pokedex;
+&nbsp;
+<b class="fc">&nbsp;    private PokemonController() {</b>
+<b class="fc">&nbsp;        loadPokedex();</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public static PokemonController getInstance() {
+<b class="fc">&nbsp;        if (instance == null) {</b>
+<b class="fc">&nbsp;            instance = new PokemonController();</b>
+&nbsp;        }
+<b class="fc">&nbsp;        return instance;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    private void loadPokedex() {
+<b class="fc">&nbsp;        Path currentRelativePath = Paths.get(&quot;&quot;);</b>
+<b class="fc">&nbsp;        String ruta = currentRelativePath.toAbsolutePath().toString();</b>
+<b class="fc">&nbsp;        String dir = ruta + File.separator + &quot;src&quot; + File.separator + &quot;data&quot;;</b>
+<b class="fc">&nbsp;        String paisesFile = dir + File.separator + &quot;pokemon.json&quot;;</b>
+<b class="fc">&nbsp;        Gson gson = new GsonBuilder().setPrettyPrinting().create();</b>
+&nbsp;
+&nbsp;        // Actualizar a try-with-resources
+<b class="fc">&nbsp;        try (Reader reader = Files.newBufferedReader(Paths.get(paisesFile))) {</b>
+<b class="fc">&nbsp;            this.pokedex = gson.fromJson(reader, new TypeToken&lt;Pokedex&gt;() {</b>
+<b class="fc">&nbsp;            }.getType());</b>
+<b class="fc">&nbsp;            System.out.println(&quot;Pokedex loaded! There are: &quot; + pokedex.getPokemon().size());</b>
+<b class="fc">&nbsp;        } catch (Exception e) {</b>
+<b class="nc">&nbsp;            System.out.println(&quot;Error loading Pokedex!&quot;);</b>
+<b class="nc">&nbsp;            System.out.println(&quot;Error: &quot; + e.getMessage());</b>
+<b class="fc">&nbsp;        }</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public Pokemon getPokemon(int index) {
+<b class="nc">&nbsp;        return pokedex.getPokemon().get(index);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public List&lt;String&gt; tenFirstNames() {
+<b class="nc">&nbsp;        return pokedex.getPokemon().stream()</b>
+<b class="nc">&nbsp;                .limit(10)</b>
+<b class="nc">&nbsp;                .map(Pokemon::getName)</b>
+<b class="nc">&nbsp;                .toList();</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public List&lt;String&gt; fiveLastNames() {
+<b class="nc">&nbsp;        return pokedex.getPokemon().stream()</b>
+<b class="nc">&nbsp;                .skip(pokedex.getPokemon().size() - 5)</b>
+<b class="nc">&nbsp;                .map(Pokemon::getName)</b>
+<b class="nc">&nbsp;                .toList();</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public List&lt;Pokemon&gt; pikachuData() {
+<b class="nc">&nbsp;        return pokedex.getPokemon().stream()</b>
+<b class="nc">&nbsp;                .filter(pokemon -&gt; pokemon.getName().equals(&quot;Pikachu&quot;))</b>
+<b class="nc">&nbsp;                .toList();</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public List&lt;String&gt; charmanderEvolution() {
+<b class="nc">&nbsp;        return pokedex.getPokemon().stream()</b>
+<b class="nc">&nbsp;                .filter(pokemon -&gt; pokemon.getNextEvolution() != null)</b>
+<b class="nc">&nbsp;                .filter(pokemon -&gt; pokemon.getName().equals(&quot;Charmander&quot;))</b>
+<b class="nc">&nbsp;                .map(Pokemon::getNextEvolution)</b>
+<b class="nc">&nbsp;                .flatMap(pokemon -&gt; pokemon.stream()</b>
+<b class="nc">&nbsp;                        .map(NextEvolutionItem::getName))</b>
+<b class="nc">&nbsp;                .toList();</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public List&lt;String&gt; fireType() {
+<b class="nc">&nbsp;        return pokedex.getPokemon().stream()</b>
+<b class="nc">&nbsp;                .filter(pokemon -&gt; pokemon.getType().contains(&quot;Fire&quot;))</b>
+<b class="nc">&nbsp;                .map(pokemon -&gt; pokemon.getName() + &quot; &quot; + pokemon.getType())</b>
+<b class="nc">&nbsp;                .toList();</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public List&lt;String&gt; weaknessesWorE() {
+<b class="nc">&nbsp;        return pokedex.getPokemon().stream()</b>
+<b class="nc">&nbsp;                .filter(pokemon -&gt; pokemon.getWeaknesses().contains(&quot;Water&quot;) || pokemon.getWeaknesses().contains(&quot;Electric&quot;))</b>
+<b class="nc">&nbsp;                .map(pokemon -&gt; pokemon.getName() + &quot; &quot; + pokemon.getWeaknesses())</b>
+<b class="nc">&nbsp;                .toList();</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public long onlyOneWeakness() {
+<b class="fc">&nbsp;        return pokedex.getPokemon().stream()</b>
+<b class="fc">&nbsp;                .filter(pokemon -&gt; pokemon.getWeaknesses().size() == 1).count();</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public List&lt;String&gt; pokemonWithMaxWeaknesses() {
+<b class="nc">&nbsp;        return pokedex.getPokemon().stream()</b>
+<b class="nc">&nbsp;                .sorted((pokemon1, pokemon2) -&gt; pokemon2.getWeaknesses().size() - pokemon1.getWeaknesses().size())</b>
+<b class="nc">&nbsp;                .limit(1)</b>
+<b class="nc">&nbsp;                .map(pokemon -&gt; pokemon.getName() + &quot; &quot; + pokemon.getWeaknesses())</b>
+<b class="nc">&nbsp;                .toList();</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public List&lt;String&gt; pokemonWithMinEvolutions() {
+<b class="nc">&nbsp;        return pokedex.getPokemon().stream()</b>
+<b class="nc">&nbsp;                .filter(pokemon -&gt; pokemon.getNextEvolution() != null)</b>
+<b class="nc">&nbsp;                .sorted(Comparator.comparingInt(pokemon -&gt; pokemon.getNextEvolution().size()))</b>
+<b class="nc">&nbsp;                .limit(1)</b>
+<b class="nc">&nbsp;                .map(Pokemon::getName)</b>
+<b class="nc">&nbsp;                .toList();</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public List&lt;String&gt; heaviestPokemon() {
+<b class="nc">&nbsp;        return pokedex.getPokemon().stream()</b>
+<b class="nc">&nbsp;                .sorted(Comparator.comparingDouble(Pokemon::getWeight).reversed())</b>
+<b class="nc">&nbsp;                .limit(1)</b>
+<b class="nc">&nbsp;                .map(pokemon -&gt; pokemon.getName() + &quot; &quot; + pokemon.getWeight())</b>
+<b class="nc">&nbsp;                .toList();</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public List&lt;String&gt; tallestPokemon() {
+<b class="nc">&nbsp;        return pokedex.getPokemon().stream()</b>
+<b class="nc">&nbsp;                .sorted(Comparator.comparingDouble(Pokemon::getHeight).reversed())</b>
+<b class="nc">&nbsp;                .limit(1)</b>
+<b class="nc">&nbsp;                .map(pokemon -&gt; pokemon.getName() + &quot; &quot; + pokemon.getHeight())</b>
+<b class="nc">&nbsp;                .toList();</b>
+&nbsp;    }
+&nbsp;
+&nbsp;}
+&nbsp;
+&nbsp;
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2023-09-21 12:11</div>
+</div>
+</body>
+</html>

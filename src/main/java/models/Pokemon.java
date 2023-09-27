@@ -66,13 +66,13 @@ public class Pokemon {
         return Double.parseDouble(split[0]);
     }
 
-    public double getHeight() {
+    public double getHeight() { //Devuelve la altura del pokemon en double omitiendo la unidad de medida
         String[] split = height.split(" ");
         return Double.parseDouble(split[0]);
     }
 
-    /*Devuelve el id, num, name, height y weight separados por ; para usarlos al imprimir el CSV*/
-    public String toCSV() {
+
+    public String toCSV() { //Devuelve el id, num, name, height y weight separados por ; para usarlos al imprimir el CSV
         return id + ";" + num + ";" + name + ";" + height + ";" + weight;
     }
 

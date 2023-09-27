@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="ProyectoJson:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< Updated upstream
     <list default="true" id="41bd18c0-fde6-4f68-9017-612a2cdff49d" name="Changes" comment="Primer commit">
       <change afterPath="$PROJECT_DIR$/src/main/java/services/DataBaseManager.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/services/PokedexManager.java" afterDir="false" />
@@ -16,11 +22,31 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controllers/PokemonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/PokemonController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/models/Pokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Pokemon.java" afterDir="false" />
+=======
+    <list default="true" id="8053052e-f744-4533-8fdd-851bb2ba3d12" name="Changes" comment="todos los metodos, exportCSV, readCSV">
+      <change afterPath="$PROJECT_DIR$/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Objetivos.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/Objetivos.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/pokemon.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/pokemon.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/PokemonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/PokemonController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/NextEvolutionItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/NextEvolutionItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Pokedex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Pokedex.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Pokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Pokemon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/PrevEvolutionItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/PrevEvolutionItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Response.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Response.java" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExportToHTMLSettings">
+    <option name="OPEN_IN_BROWSER" value="true" />
+    <option name="OUTPUT_DIRECTORY" value="C:\Users\Eva\Documents\2daw\dwservidor\ProyectoJSON\practicaJson\htmlReport" />
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -42,47 +68,48 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="AnnotationType" />
+        <option value="JUnit5 Test Class" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="origin/master" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="feature/pokemon2de2" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;jaimemen897&quot;
-  }
-}</component>
-  <component name="GithubPullRequestsUISettings">
-    <option name="selectedUrlAndAccountId">
-      <UrlAndAccount>
-        <option name="accountId" value="4caac86f-8e80-40f2-b1fb-803c945e16d6" />
-        <option name="url" value="https://github.com/jaimemen897/practicaJson.git" />
-      </UrlAndAccount>
-    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 2
 }</component>
-  <component name="ProjectId" id="2VcxXG1omTrgzXfK9jdPaJx3hn1" />
+  <component name="ProjectId" id="2VfLywtyFpcKjU70uTWFgWQ5SdH" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
-    <option name="showExcludedFiles" value="false" />
+    <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<< Updated upstream
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
@@ -104,12 +131,36 @@
     &quot;DatabaseDriversLRU&quot;: [
       &quot;h2&quot;
     ]
+=======
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "create.test.in.the.same.root": "true",
+    "git-widget-placeholder": "develop",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/Eva/Documents/2daw/dwservidor/ProyectoAemet/proyectoAemet",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "vue.rearranger.settings.migration": "true"
+>>>>>>> Stashed changes
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
+    <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
+<<<<<<< Updated upstream
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Jaime\Downloads\Clase2\DWServidor\ProyectoJson\ProyectoJson\src" />
     </key>
@@ -129,10 +180,12 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+=======
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="controllers" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JAR Application.ProyectoJson.jar">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="ProyectoJson.main" />
@@ -140,6 +193,45 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PokemonControllerTest1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ProyectoJson.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="controllers" />
+      <option name="MAIN_CLASS_NAME" value="controllers.PokemonControllerTest1" />
+      <option name="TEST_OBJECT" value="class" />
+>>>>>>> Stashed changes
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+<<<<<<< Updated upstream
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="ProyectoJson.main" />
+=======
+    <configuration name="PokemonControllerTest1.getPokemon" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ProyectoJson.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="controllers" />
+      <option name="MAIN_CLASS_NAME" value="controllers.PokemonControllerTest1" />
+      <option name="METHOD_NAME" value="getPokemon" />
+      <option name="TEST_OBJECT" value="method" />
+>>>>>>> Stashed changes
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+<<<<<<< Updated upstream
     <configuration name="PokedexManager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="services.PokedexManager" />
       <module name="ProyectoJson.main" />
@@ -149,14 +241,41 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+=======
+    <configuration name="PokemonControllerTest1.onlyOneWeakness" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ProyectoJson.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="controllers" />
+      <option name="MAIN_CLASS_NAME" value="controllers.PokemonControllerTest1" />
+      <option name="METHOD_NAME" value="onlyOneWeakness" />
+      <option name="TEST_OBJECT" value="method" />
+>>>>>>> Stashed changes
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+<<<<<<< Updated upstream
     <recent_temporary>
       <list>
         <item itemvalue="Application.PokedexManager" />
         <item itemvalue="Application.DataBaseManager" />
+=======
+    <configuration name="ProyectoJson.jar" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/src/ProyectoJson.jar" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JAR Application.ProyectoJson.jar" />
+        <item itemvalue="JUnit.PokemonControllerTest1.onlyOneWeakness" />
+        <item itemvalue="JUnit.PokemonControllerTest1.getPokemon" />
+        <item itemvalue="JUnit.PokemonControllerTest1" />
+>>>>>>> Stashed changes
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -164,10 +283,11 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="41bd18c0-fde6-4f68-9017-612a2cdff49d" name="Changes" comment="" />
-      <created>1695149207966</created>
+      <changelist id="8053052e-f744-4533-8fdd-851bb2ba3d12" name="Changes" comment="" />
+      <created>1695222450991</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
+<<<<<<< Updated upstream
       <updated>1695149207966</updated>
       <workItem from="1695149209076" duration="487000" />
       <workItem from="1695198286022" duration="2757000" />
@@ -194,16 +314,78 @@
       <workItem from="1695837805947" duration="125000" />
       <workItem from="1695838280660" duration="407000" />
       <workItem from="1695838703050" duration="2923000" />
+=======
+      <updated>1695222450991</updated>
+      <workItem from="1695222456946" duration="2893000" />
+      <workItem from="1695227617747" duration="5670000" />
+      <workItem from="1695233357826" duration="2686000" />
+      <workItem from="1695286186161" duration="1750000" />
+      <workItem from="1695287973908" duration="11763000" />
+      <workItem from="1695306255080" duration="2944000" />
+      <workItem from="1695319491134" duration="2341000" />
+      <workItem from="1695321869806" duration="81000" />
+      <workItem from="1695321973472" duration="20000" />
+      <workItem from="1695322031590" duration="598000" />
+      <workItem from="1695373096959" duration="4681000" />
+      <workItem from="1695391473930" duration="571000" />
+      <workItem from="1695396067696" duration="5397000" />
+      <workItem from="1695404183373" duration="1088000" />
+      <workItem from="1695406458288" duration="4000" />
+      <workItem from="1695462693936" duration="2356000" />
+      <workItem from="1695484891192" duration="5462000" />
+      <workItem from="1695499398379" duration="123000" />
+      <workItem from="1695499545959" duration="90000" />
+      <workItem from="1695569096577" duration="28000" />
+      <workItem from="1695573117639" duration="1434000" />
+      <workItem from="1695574926990" duration="1081000" />
+      <workItem from="1695636137990" duration="4655000" />
+      <workItem from="1695648868703" duration="6000" />
+      <workItem from="1695652544622" duration="37000" />
+      <workItem from="1695653295382" duration="8000" />
+      <workItem from="1695653334817" duration="31000" />
+      <workItem from="1695653393549" duration="560000" />
+      <workItem from="1695657510790" duration="199000" />
+      <workItem from="1695742867172" duration="31000" />
+      <workItem from="1695742966174" duration="13000" />
+      <workItem from="1695743169099" duration="40000" />
+      <workItem from="1695745780070" duration="29000" />
+      <workItem from="1695745884356" duration="35000" />
+      <workItem from="1695746130163" duration="22000" />
+      <workItem from="1695746292435" duration="49000" />
+      <workItem from="1695746760413" duration="65000" />
+      <workItem from="1695746995544" duration="16000" />
+      <workItem from="1695747146730" duration="21000" />
+      <workItem from="1695750962910" duration="28000" />
+      <workItem from="1695751695127" duration="26000" />
+      <workItem from="1695836622738" duration="4083000" />
+      <workItem from="1695840770704" duration="902000" />
+>>>>>>> Stashed changes
     </task>
-    <task id="LOCAL-00001" summary="Primer commit">
+    <task id="LOCAL-00001" summary="pokemonController once primeros metodos acabados">
       <option name="closed" value="true" />
-      <created>1695149254519</created>
+      <created>1695320332493</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1695149254519</updated>
+      <updated>1695320332493</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="todos los metodos, exportCSV, readCSV">
+      <option name="closed" value="true" />
+      <created>1695321164000</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1695321164000</updated>
+    </task>
+    <task id="LOCAL-00003" summary="todos los metodos, exportCSV, readCSV">
+      <option name="closed" value="true" />
+      <created>1695321397032</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1695321397032</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -221,8 +403,13 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Primer commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Primer commit" />
+    <MESSAGE value="pokemonController once primeros metodos acabados" />
+    <MESSAGE value="todos los metodos, exportCSV, readCSV" />
+    <option name="LAST_COMMIT_MESSAGE" value="todos los metodos, exportCSV, readCSV" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/ProyectoJson$PokemonControllerTest_onlyOneWeakness.ic" NAME="PokemonControllerTest.onlyOneWeakness Coverage Results" MODIFIED="1695291053324" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>controllers.*</FILTER>
+    </SUITE>
   </component>
 </project>

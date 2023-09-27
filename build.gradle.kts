@@ -1,7 +1,12 @@
+
 plugins {
     id("java")
     id("io.freefair.lombok") version "8.3"
+    application
+}
 
+application {
+    mainClass.set("Main")
 }
 
 group = "org.example"
@@ -23,6 +28,18 @@ dependencies {
     implementation("org.mybatis:mybatis:3.5.13")
     implementation("com.opencsv:opencsv:5.8")
     implementation("com.h2database:h2:2.2.224")
+}
+
+
+tasks.register<Jar>("executableJar") {
+    dependsOn(tasks.named("jar"))
+    manifest {
+        attributes(
+            "Main-Class" to "Main"
+        )
+    }
+    from(sourceSets.main.get().output)
+    archiveFileName.set("${project.name}-${project.version}-executable.jar")
 }
 
 tasks.test {

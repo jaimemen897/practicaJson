@@ -1,0 +1,193 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=windows-1252"> 
+  <title>Coverage Report > PokemonControllerTest</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">controllers</a>
+</div>
+
+<h1>Coverage Summary for Class: PokemonControllerTest (controllers)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">PokemonControllerTest</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    15,4%
+  </span>
+  <span class="absValue">
+    (2/13)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    13,3%
+  </span>
+  <span class="absValue">
+    (4/30)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package controllers;
+&nbsp;
+&nbsp;import models.Pokemon;
+&nbsp;import org.junit.Test;
+&nbsp;
+&nbsp;import java.util.Collections;
+&nbsp;
+&nbsp;import static org.junit.Assert.*;
+&nbsp;
+<b class="fc">&nbsp;public class PokemonControllerTest {</b>
+&nbsp;
+&nbsp;    @Test
+&nbsp;    public void getPokemon() {
+<b class="nc">&nbsp;        PokemonController pc = PokemonController.getInstance();</b>
+<b class="nc">&nbsp;        assertEquals(&quot;Bulbasaur&quot;, pc.getPokemon(0).getName());</b>
+<b class="nc">&nbsp;        assertNotEquals(&quot;Bulbasaur&quot;, pc.getPokemon(1).getName());</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @Test
+&nbsp;    public void tenFirstNames() {
+<b class="nc">&nbsp;        PokemonController pc = PokemonController.getInstance();</b>
+<b class="nc">&nbsp;        assertEquals(10, pc.tenFirstNames().size());</b>
+<b class="nc">&nbsp;        assertNotEquals(11, pc.tenFirstNames().size());</b>
+<b class="nc">&nbsp;        assertTrue(pc.tenFirstNames().contains(pc.getPokemon(0).getName()));</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @Test
+&nbsp;    public void fiveLastNames() {
+<b class="nc">&nbsp;        PokemonController pc = PokemonController.getInstance();</b>
+<b class="nc">&nbsp;        assertEquals(5, pc.fiveLastNames().size());</b>
+<b class="nc">&nbsp;        assertNotEquals(6, pc.fiveLastNames().size());</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @Test
+&nbsp;    public void pikachuData() {
+<b class="nc">&nbsp;        PokemonController pc = PokemonController.getInstance();</b>
+<b class="nc">&nbsp;        assertEquals(&quot;Pikachu&quot;, pc.pikachuData().get(0).getName());</b>
+<b class="nc">&nbsp;        assertNotEquals(&quot;Bulbasaur&quot;, pc.pikachuData().get(0).getName());</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @Test
+&nbsp;    public void charmanderEvolution() {
+<b class="nc">&nbsp;        PokemonController pc = PokemonController.getInstance();</b>
+<b class="nc">&nbsp;        assertEquals(&quot;[Charmeleon, Charizard]&quot;, pc.charmanderEvolution().toString());</b>
+<b class="nc">&nbsp;        assertNotEquals(&quot;[Charmeleon, Charizard, Charmander]&quot;, pc.charmanderEvolution().toString());</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @Test
+&nbsp;    public void fireType() {
+<b class="nc">&nbsp;        PokemonController pc = PokemonController.getInstance();</b>
+&nbsp;
+&nbsp;    }
+&nbsp;
+&nbsp;    @Test
+&nbsp;    public void weaknessesWorE() {
+<b class="nc">&nbsp;        PokemonController pc = PokemonController.getInstance();</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @Test
+&nbsp;    public void onlyOneWeakness() {
+<b class="fc">&nbsp;        PokemonController pc = PokemonController.getInstance();</b>
+<b class="fc">&nbsp;        long res = pc.onlyOneWeakness();</b>
+<b class="fc">&nbsp;        assertEquals(res, pc.onlyOneWeakness());</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @Test
+&nbsp;    public void pokemonWithMaxWeaknesses() {
+<b class="nc">&nbsp;        PokemonController pc = PokemonController.getInstance();</b>
+<b class="nc">&nbsp;        assertEquals(&quot;[Magneton [Fire, Ground, Fighting]]&quot;, pc.pokemonWithMaxWeaknesses().toString());</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @Test
+&nbsp;    public void pokemonWithMinEvolutions() {
+<b class="nc">&nbsp;        PokemonController pc = PokemonController.getInstance();</b>
+<b class="nc">&nbsp;        assertEquals(&quot;[Bulbasaur [Poison, Flying]]&quot;, pc.pokemonWithMinEvolutions().toString());</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @Test
+&nbsp;    public void heaviestPokemon() {
+<b class="nc">&nbsp;        PokemonController pc = PokemonController.getInstance();</b>
+<b class="nc">&nbsp;        assertEquals(&quot;Snorlax&quot;, pc.heaviestPokemon().toString());</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @Test
+&nbsp;    public void tallestPokemon() {
+<b class="nc">&nbsp;        PokemonController pc = PokemonController.getInstance();</b>
+<b class="nc">&nbsp;        assertEquals(&quot;Alakazam&quot;, pc.tallestPokemon().toString());</b>
+&nbsp;    }
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2023-09-21 12:11</div>
+</div>
+</body>
+</html>

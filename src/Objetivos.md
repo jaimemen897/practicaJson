@@ -27,7 +27,8 @@ Tras leerlo usando la api de colecciones funcional, obtener:
 -[x] Lee el fichero que has exportado y sácalo por pantalla
 -[ ] Hacer el ejecutable
 
-Introduce los datos que has importado de un CSV en una base de datos en fichero como H2 o SQLite y luego realiza un select para ver el resultado de las operaciones. Los datos de conexión deben estar encapsulados en un manejador y leídos de un fichero de propiedades o de entorno.
+- [ ] Introduce los datos que has importado de un CSV en una base de datos en fichero como H2 o SQLite
+y luego realiza un select para ver el resultado de las operaciones. Los datos de conexión deben
+estar encapsulados en un manejador y leídos de un fichero de propiedades o de entorno.
 
-Desde la base de datos, saca la información de Pikachu.
-
+- [x] Desde la base de datos, saca la información de Pikachu.
