@@ -21,8 +21,8 @@ Tras leerlo usando la api de colecciones funcional, obtener:
 -[x] Media de debilidades de los pokemons.
 -[x] Pokemons agrupados por tipo.
 -[x] Numero de pokemons agrupados por debilidad.
--[ ] Pokemons agrupados por numero de evoluciones.
--[ ] Sacar la debilidad más común
+-[x] Pokemons agrupados por numero de evoluciones.
+-[x] Sacar la debilidad más común
 -[x] Exporta a csv los siguintes datos de pokemons: id, num, name, height, width. 
 -[x] Lee el fichero que has exportado y sácalo por pantalla
 -[ ] Hacer el ejecutable
@@ -30,3 +30,4 @@ Tras leerlo usando la api de colecciones funcional, obtener:
 Introduce los datos que has importado de un CSV en una base de datos en fichero como H2 o SQLite y luego realiza un select para ver el resultado de las operaciones. Los datos de conexión deben estar encapsulados en un manejador y leídos de un fichero de propiedades o de entorno.
 
 Desde la base de datos, saca la información de Pikachu.
+
