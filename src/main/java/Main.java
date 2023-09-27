@@ -1,9 +1,12 @@
 import controllers.PokemonController;
 import models.Pokedex;
+import models.Pokemon;
+import services.DataBaseManager;
+import services.PokedexManager;
 
 public class Main {
     public static void main(String[] args) {
-        PokedexManager pokedexManager = PokedexManager.getInstance(DataBaseManager.getConnection());
+        PokedexManager pokedexManager = PokedexManager.getInstance(DataBaseManager.getInstance().getConnection());
         PokemonController pokemonController = PokemonController.getInstance();
 
         pokemonController.readCSV();

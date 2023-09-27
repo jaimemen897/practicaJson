@@ -4,6 +4,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 import lombok.Getter;
+import models.NextEvolutionItem;
 import models.Pokedex;
 import models.Pokemon;
 
@@ -50,7 +51,6 @@ public class PokemonController {
         }
     }
 
-    }
     public List<String> tenFirstNames() { //devuelve una lista con los 10 primeros nombres de los pokemon
         return pokedex.getPokemon().stream()
                 .limit(10)

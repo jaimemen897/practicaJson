@@ -9,35 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-<<<<<<< Updated upstream
-    <list default="true" id="41bd18c0-fde6-4f68-9017-612a2cdff49d" name="Changes" comment="Primer commit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/DataBaseManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/PokedexManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/database.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/init.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Objetivos.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/Objetivos.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/PokemonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/PokemonController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/Pokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Pokemon.java" afterDir="false" />
-=======
     <list default="true" id="8053052e-f744-4533-8fdd-851bb2ba3d12" name="Changes" comment="todos los metodos, exportCSV, readCSV">
-      <change afterPath="$PROJECT_DIR$/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Objetivos.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/Objetivos.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/pokemon.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/pokemon.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controllers/PokemonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/PokemonController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/NextEvolutionItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/NextEvolutionItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/Pokedex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Pokedex.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/Pokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Pokemon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/PrevEvolutionItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/PrevEvolutionItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/Response.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Response.java" afterDir="false" />
->>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,29 +84,6 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-<<<<<<< Updated upstream
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/implementBBDD&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Jaime/Downloads/Clase2/DWServidor/ProyectoJson/ProyectoJson/src&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-  },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;h2&quot;
-    ]
-=======
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
@@ -153,39 +105,22 @@
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.keymap",
     "vue.rearranger.settings.migration": "true"
->>>>>>> Stashed changes
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "h2"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
-<<<<<<< Updated upstream
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Jaime\Downloads\Clase2\DWServidor\ProyectoJson\ProyectoJson\src" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Jaime\Downloads\Clase2\DWServidor\ProyectoJson\ProyectoJson\src\main\resources" />
-      <recent name="C:\Users\Jaime\Downloads\Clase2\DWServidor\ProyectoJson\ProyectoJson\src\main\java\services" />
-      <recent name="C:\Users\Jaime\Downloads\Clase2\DWServidor\ProyectoJson\ProyectoJson\src\data" />
-    </key>
-  </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="DataBaseManager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="services.DataBaseManager" />
-      <module name="ProyectoJson.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="services.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-=======
     <key name="CreateTestDialog.RecentsKey">
       <recent name="controllers" />
     </key>
   </component>
-  <component name="RunManager" selected="JAR Application.ProyectoJson.jar">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="ProyectoJson.main" />
@@ -204,16 +139,10 @@
       <option name="PACKAGE_NAME" value="controllers" />
       <option name="MAIN_CLASS_NAME" value="controllers.PokemonControllerTest1" />
       <option name="TEST_OBJECT" value="class" />
->>>>>>> Stashed changes
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-<<<<<<< Updated upstream
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="ProyectoJson.main" />
-=======
     <configuration name="PokemonControllerTest1.getPokemon" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ProyectoJson.main" />
       <extension name="coverage">
@@ -226,22 +155,10 @@
       <option name="MAIN_CLASS_NAME" value="controllers.PokemonControllerTest1" />
       <option name="METHOD_NAME" value="getPokemon" />
       <option name="TEST_OBJECT" value="method" />
->>>>>>> Stashed changes
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-<<<<<<< Updated upstream
-    <configuration name="PokedexManager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="services.PokedexManager" />
-      <module name="ProyectoJson.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="services.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-=======
     <configuration name="PokemonControllerTest1.onlyOneWeakness" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ProyectoJson.main" />
       <extension name="coverage">
@@ -254,17 +171,10 @@
       <option name="MAIN_CLASS_NAME" value="controllers.PokemonControllerTest1" />
       <option name="METHOD_NAME" value="onlyOneWeakness" />
       <option name="TEST_OBJECT" value="method" />
->>>>>>> Stashed changes
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-<<<<<<< Updated upstream
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.PokedexManager" />
-        <item itemvalue="Application.DataBaseManager" />
-=======
     <configuration name="ProyectoJson.jar" type="JarApplication" temporary="true">
       <option name="JAR_PATH" value="$PROJECT_DIR$/src/ProyectoJson.jar" />
       <method v="2" />
@@ -275,7 +185,6 @@
         <item itemvalue="JUnit.PokemonControllerTest1.onlyOneWeakness" />
         <item itemvalue="JUnit.PokemonControllerTest1.getPokemon" />
         <item itemvalue="JUnit.PokemonControllerTest1" />
->>>>>>> Stashed changes
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -287,34 +196,6 @@
       <created>1695222450991</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-<<<<<<< Updated upstream
-      <updated>1695149207966</updated>
-      <workItem from="1695149209076" duration="487000" />
-      <workItem from="1695198286022" duration="2757000" />
-      <workItem from="1695321981461" duration="1000" />
-      <workItem from="1695369909139" duration="2952000" />
-      <workItem from="1695372901927" duration="1724000" />
-      <workItem from="1695374662805" duration="1892000" />
-      <workItem from="1695389443043" duration="29000" />
-      <workItem from="1695390527685" duration="233000" />
-      <workItem from="1695394632869" duration="508000" />
-      <workItem from="1695396099920" duration="109000" />
-      <workItem from="1695399588722" duration="1951000" />
-      <workItem from="1695404788981" duration="1428000" />
-      <workItem from="1695462707956" duration="3048000" />
-      <workItem from="1695485135452" duration="9777000" />
-      <workItem from="1695553060020" duration="683000" />
-      <workItem from="1695553863915" duration="6000" />
-      <workItem from="1695557580019" duration="31000" />
-      <workItem from="1695557828362" duration="12000" />
-      <workItem from="1695558059493" duration="15000" />
-      <workItem from="1695558323504" duration="112000" />
-      <workItem from="1695703476710" duration="87000" />
-      <workItem from="1695837465454" duration="322000" />
-      <workItem from="1695837805947" duration="125000" />
-      <workItem from="1695838280660" duration="407000" />
-      <workItem from="1695838703050" duration="2923000" />
-=======
       <updated>1695222450991</updated>
       <workItem from="1695222456946" duration="2893000" />
       <workItem from="1695227617747" duration="5670000" />
@@ -358,8 +239,7 @@
       <workItem from="1695750962910" duration="28000" />
       <workItem from="1695751695127" duration="26000" />
       <workItem from="1695836622738" duration="4083000" />
-      <workItem from="1695840770704" duration="902000" />
->>>>>>> Stashed changes
+      <workItem from="1695840770704" duration="1690000" />
     </task>
     <task id="LOCAL-00001" summary="pokemonController once primeros metodos acabados">
       <option name="closed" value="true" />

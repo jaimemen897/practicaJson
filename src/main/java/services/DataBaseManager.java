@@ -13,7 +13,6 @@ import java.util.Properties;
 public class DataBaseManager implements AutoCloseable {
     private static DataBaseManager instance;
     private static final String propertiesPath = "src" + File.separator + "main" + File.separator + "resources" + File.separator + "database.properties";
-    @Getter
     private static Connection connection;
 
     private DataBaseManager() {
@@ -60,6 +59,10 @@ public class DataBaseManager implements AutoCloseable {
         } catch (SQLException e) {
             System.out.println("Error al cerrar la conexión con la base de datos: " + e.getMessage());
         }
+    }
+
+    public Connection getConnection() {
+        return connection;
     }
 
 }

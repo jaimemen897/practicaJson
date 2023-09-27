@@ -11,7 +11,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PokedexManager {
-    /*private static final String csvFilePath = "src" + File.separator + "data" + File.separator + "pokemon.csv";*/
     private static PokedexManager instance;
     private final Connection connection;
 
