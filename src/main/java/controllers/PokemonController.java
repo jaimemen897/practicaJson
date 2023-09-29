@@ -22,7 +22,7 @@ public class PokemonController {
     private static PokemonController instance;
     private Pokedex pokedex;
     //lee el directorio donde se encuentra el proyecto
-    private final String dir = Paths.get("").toAbsolutePath() + File.separator + "src" + File.separator + "data";
+    private final String dir = Paths.get("").toAbsolutePath() + File.separator + "data";
 
 
     private PokemonController() {

@@ -19,6 +19,7 @@ public class DataBaseManager implements AutoCloseable {
         openConnection();
     }
 
+
     public static DataBaseManager getInstance() {
         try {
             Class.forName("org.h2.Driver");
@@ -33,14 +34,14 @@ public class DataBaseManager implements AutoCloseable {
 
     private void openConnection() {
         try {
+            InputStream dbProps = ClassLoader.getSystemResourceAsStream("database.properties");
             Properties properties = new Properties();
-            properties.load(new FileReader(propertiesPath));
+            properties.load(dbProps);
             String url = properties.getProperty("db.url");
             String user = properties.getProperty("db.user");
             String password = properties.getProperty("db.password");
             String init = properties.getProperty("db.init");
             connection = DriverManager.getConnection(url, user, password);
-
             Reader reader = new BufferedReader(new FileReader(getClass().getClassLoader().getResource(init).getPath()));
             ScriptRunner scriptRunner = new ScriptRunner(connection);
             scriptRunner.runScript(reader);

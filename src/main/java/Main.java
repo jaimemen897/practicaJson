@@ -1,5 +1,4 @@
 import controllers.PokemonController;
-import models.Pokedex;
 import models.Pokemon;
 import services.DataBaseManager;
 import services.PokedexManager;
