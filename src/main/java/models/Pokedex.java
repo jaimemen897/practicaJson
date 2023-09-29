@@ -9,4 +9,7 @@ public class Pokedex {
     //lista donde se almacenan los pokemones
     private List<Pokemon> pokemon;
 
+    public List<Pokemon> getPokemon() {
+        return pokemon;
+    }
 }

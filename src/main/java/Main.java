@@ -3,12 +3,12 @@ import models.Pokemon;
 import services.DataBaseManager;
 import services.PokedexManager;
 
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
         PokedexManager pokedexManager = PokedexManager.getInstance(DataBaseManager.getInstance().getConnection());
         PokemonController pokemonController = PokemonController.getInstance();
-
-        pokemonController.readCSV();
 
         for (Pokemon pokemon : pokemonController.getPokedex().getPokemon()) {
             pokedexManager.save(pokemon);
