@@ -4,6 +4,7 @@ import lombok.Getter;
 import org.apache.ibatis.jdbc.ScriptRunner;
 
 import java.io.*;
+import java.nio.file.Paths;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -37,8 +38,9 @@ import java.util.Properties;
 
 @Getter
 public class DataBaseManager implements AutoCloseable {
-    private static DataBaseManager instance;
-    private static final String propertiesPath = "src" + File.separator + "main" + File.separator + "resources" + File.separator + "database.properties";
+    private static DataBaseManager instance;;
+    private static final String propertiesPath = Paths.get("").toAbsolutePath() + File.separator + "resources" + File.separator + "database.properties";
+    private static final String initPath = Paths.get("").toAbsolutePath() + File.separator + "resources" + File.separator + "init.sql";
     private static Connection connection;
 
     private DataBaseManager() {
@@ -77,7 +79,7 @@ public class DataBaseManager implements AutoCloseable {
             String password = properties.getProperty("db.password");
             String init = properties.getProperty("db.init");
             connection = DriverManager.getConnection(url, user, password);
-            Reader reader = new BufferedReader(new FileReader(getClass().getClassLoader().getResource(init).getPath()));
+            Reader reader = new BufferedReader(new FileReader(initPath));
             ScriptRunner scriptRunner = new ScriptRunner(connection);
             scriptRunner.runScript(reader);
 

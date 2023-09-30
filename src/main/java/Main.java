@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
         PokedexManager pokedexManager = PokedexManager.getInstance(DataBaseManager.getInstance().getConnection());
         PokemonController pokemonController = PokemonController.getInstance();
-        
+
         for (Pokemon pokemon : pokemonController.getPokedex().getPokemon()) {
             pokedexManager.save(pokemon);
         }
