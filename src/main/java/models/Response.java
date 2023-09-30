@@ -1,13 +1,19 @@
 package models;
-
 import lombok.Getter;
 
 import java.util.List;
 
+/**
+ * La clase Response representa una respuesta que contiene una lista de objetos Pokemon.
+ * Esta clase se utiliza para encapsular la respuesta de algún servicio o función que devuelve una lista de Pokémon.
+ *
+ * @author Eva Gomez, Jaime Medina
+ */
+
 @Getter
 public class Response {
-    //En esta clase se crea un objeto de tipo Response que contiene una lista de pokemones
-    // para poder acceder a ellos desde el controlador
+    /**
+     * La lista de Pokémon contenida en la respuesta.
+     */
     private List<Pokemon> pokemon;
-
 }

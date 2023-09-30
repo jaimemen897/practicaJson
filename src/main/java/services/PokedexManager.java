@@ -10,14 +10,35 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * La clase PokedexManager se encarga de gestionar la interacción con una base de datos que almacena información de Pokémon.
+ * Permite realizar operaciones como guardar un Pokémon en la base de datos, buscar Pokémon por nombre y recuperar todos los Pokémon almacenados.
+ *
+ * <p>La instancia de esta clase se crea mediante el patrón Singleton para garantizar que solo haya una instancia activa
+ * de PokedexManager en la aplicación.
+ *
+ * @author Eva Gomez, Jaime Medina
+ */
 public class PokedexManager {
     private static PokedexManager instance;
     private final Connection connection;
 
+
+    /**
+     * Constructor privado de PokedexManager. Se utiliza para crear una instancia única de la clase.
+     *
+     * @param connection La conexión a la base de datos que se utilizará para las operaciones.
+     */
     private PokedexManager(Connection connection) {
         this.connection = connection;
     }
 
+    /**
+     * Obtiene una instancia única de PokedexManager utilizando el patrón Singleton.
+     *
+     * @param connection La conexión a la base de datos.
+     * @return La instancia única de PokedexManager.
+     */
     public static PokedexManager getInstance(Connection connection) {
         if (instance == null) {
             instance = new PokedexManager(connection);
@@ -25,6 +46,11 @@ public class PokedexManager {
         return instance;
     }
 
+    /**
+     * Guarda un Pokémon en la base de datos.
+     *
+     * @param pokemon El Pokémon que se va a guardar en la base de datos.
+     */
     public void save(Pokemon pokemon) {
         try {
             String sqlQuery = "INSERT INTO POKEMON (id, num, name, height, weight) VALUES (?, ?, ?, ?, ?)";
@@ -40,6 +66,11 @@ public class PokedexManager {
         }
     }
 
+    /**
+     * Recupera todos los Pokémon almacenados en la base de datos.
+     *
+     * @return Una lista de Pokémon almacenados en la base de datos.
+     */
     public List<Pokemon> findAll(){
         List<Pokemon> pokemons = new ArrayList<>();
         try {
@@ -59,6 +90,12 @@ public class PokedexManager {
         return pokemons;
     }
 
+    /**
+     * Busca un Pokémon por nombre en la base de datos.
+     *
+     * @param nombre El nombre del Pokémon a buscar.
+     * @return El Pokémon encontrado o null si no se encuentra.
+     */
     public Pokemon findByNombre(String nombre){
         Pokemon pokemon = null;
         try {
@@ -79,6 +116,4 @@ public class PokedexManager {
         }
         return pokemon;
     }
-
-
 }

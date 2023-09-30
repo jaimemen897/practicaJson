@@ -17,11 +17,21 @@ import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+/**
+ * La clase PokemonController es responsable de gestionar la información y las operaciones relacionadas con Pokémon.
+ * Proporciona una interfaz para acceder y manipular los datos de la Pokedex, así como realizar consultas y cálculos específicos
+ * sobre los Pokémon almacenados.
+ *
+ * <p>Esta clase utiliza una instancia de Pokedex para cargar y administrar los datos de Pokémon desde un archivo JSON.
+ * Ofrece diversas operaciones para obtener información sobre los Pokémon, como nombres, tipos, debilidades, evoluciones y más.
+ * También permite exportar datos a un archivo CSV y leer datos desde un archivo CSV.
+ *
+ * @author Eva Gomez, Jaime Medina
+ */
 @Getter
 public class PokemonController {
     private static PokemonController instance;
     private Pokedex pokedex;
-    //lee el directorio donde se encuentra el proyecto
     private final String dir = Paths.get("").toAbsolutePath() + File.separator + "data";
 
 
@@ -29,43 +39,58 @@ public class PokemonController {
         loadPokedex();
     }
 
-    public static PokemonController getInstance() { //hacemos el patrón singleton para que solo se pueda instanciar una vez
+    public static PokemonController getInstance() {
         if (instance == null) {
             instance = new PokemonController();
         }
         return instance;
     }
 
-    private void loadPokedex() { //cargamos el fichero json en la variable pokedex y mostramos el número de pokemon que hay
+    private void loadPokedex() {
         String paisesFile = dir + File.separator + "pokemon.json";
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
-        //Leemos el fichero y lo convertimos en un objeto Pokedex con la librería Gson
+
         try (Reader reader = Files.newBufferedReader(Paths.get(paisesFile))) {
             this.pokedex = gson.fromJson(reader, new TypeToken<Pokedex>() {
             }.getType());
             System.out.println("Pokedex loaded! There are: " + pokedex.getPokemon().size());
-        } catch (Exception e) { //si no se puede cargar el fichero, mostramos un mensaje de error
+        } catch (Exception e) {
             System.out.println("Error loading Pokedex!");
             System.out.println("Error: " + e.getMessage());
         }
     }
 
-    public List<String> tenFirstNames() { //devuelve una lista con los 10 primeros nombres de los pokemon
+    /**
+     * Devuelve una lista con los nombres de los primeros 10 Pokémon en la Pokedex.
+     *
+     * @return Una lista de nombres de Pokémon.
+     */
+    public List<String> tenFirstNames() {
         return pokedex.getPokemon().stream()
                 .limit(10)
                 .map(Pokemon::getName)
                 .toList();
     }
 
-    public List<String> fiveLastNames() { //devuelve una lista con los 5 últimos nombres de los pokemon
+    /**
+     * Devuelve una lista con los nombres de los últimos 5 Pokémon en la Pokedex.
+     *
+     * @return Una lista de nombres de Pokémon.
+     */
+    public List<String> fiveLastNames() {
         return pokedex.getPokemon().stream()
                 .skip(pokedex.getPokemon().size() - 5)
                 .map(Pokemon::getName)
                 .toList();
     }
 
-    public Pokemon pikachuData() { //devuelve los datos de un pokemon, en este caso de Pikachu
+    /**
+     * Obtiene los datos del Pokémon "Pikachu" de la Pokedex.
+     *
+     * @return El Pokémon "Pikachu" o null si no se encuentra.
+     */
+    public Pokemon pikachuData() {
         return pokedex.getPokemon().stream()
                 .filter(pokemon -> pokemon.getName().equals("Pikachu"))
                 .findFirst()
@@ -73,21 +98,36 @@ public class PokemonController {
 
     }
 
-    public List<String> fireType() { //devuelve una lista con los nombres y tipos de los pokemon de tipo fuego
+    /**
+     * Devuelve una lista de nombres de Pokémon que son del tipo "Fuego".
+     *
+     * @return Una lista de nombres de Pokémon y sus tipos.
+     */
+    public List<String> fireType() {
         return pokedex.getPokemon().stream()
                 .filter(pokemon -> pokemon.getType().contains("Fire"))
                 .map(pokemon -> pokemon.getName() + " " + pokemon.getType())
                 .toList();
     }
 
-    public List<String> weaknessesWorE() { //devuelve una lista con los nombres y debilidades de los pokemon de tipo agua o eléctrico
+    /**
+     * Devuelve una lista de nombres de Pokémon que son débiles ante "Agua" o "Eléctrico".
+     *
+     * @return Una lista de nombres de Pokémon y sus debilidades.
+     */
+    public List<String> weaknessesWorE() {
         return pokedex.getPokemon().stream()
                 .filter(pokemon -> pokemon.getWeaknesses().contains("Water") || pokemon.getWeaknesses().contains("Electric"))
                 .map(pokemon -> pokemon.getName() + " " + pokemon.getWeaknesses())
                 .toList();
     }
 
-    public List<Pokemon> charmanderEvolution() { //devuelve una lista con el pokemon que evoluciona de Charmander y sus datos
+    /**
+     * Obtiene una lista de Pokémon que evolucionan a partir de "Charmander".
+     *
+     * @return Una lista de Pokémon evolucionados de "Charmander".
+     */
+    public List<Pokemon> charmanderEvolution() {
         return pokedex.getPokemon().stream()
                 .filter(pokemon -> pokemon.getName().equals("Charmander"))
                 .flatMap(pokemon -> pokemon.getNextEvolution().stream())
@@ -99,21 +139,35 @@ public class PokemonController {
                 .toList();
     }
 
-
-    public long onlyOneWeakness() { //devuelve el número de pokemon que solo tienen una debilidad
+    /**
+     * Cuenta la cantidad de Pokémon que tienen una única debilidad.
+     *
+     * @return El número de Pokémon con una única debilidad.
+     */
+    public long onlyOneWeakness() {
         return pokedex.getPokemon().stream()
                 .filter(pokemon -> pokemon.getWeaknesses().size() == 1)
                 .count();
     }
 
-    public String mostWeaknesses() { //devuelve el nombre del pokemon que tiene más debilidades
+    /**
+     * Obtiene el nombre del Pokémon con más debilidades en la Pokedex.
+     *
+     * @return El nombre del Pokémon con más debilidades.
+     */
+    public String mostWeaknesses() {
         return pokedex.getPokemon().stream()
                 .max(Comparator.comparingInt(pokemon -> pokemon.getWeaknesses().size()))
                 .map(pokemon -> pokemon.getName() + " " + pokemon.getWeaknesses().size())
                 .orElse("");
     }
 
-    public String lessEvolutions() { //devuelve el nombre del pokemon que tiene menos evoluciones
+    /**
+     * Obtiene el nombre del Pokémon con menos evoluciones en la Pokedex.
+     *
+     * @return El nombre del Pokémon con menos evoluciones.
+     */
+    public String lessEvolutions() {
         return pokedex.getPokemon().stream()
                 .filter(pokemon -> pokemon.getNextEvolution() != null)
                 .min(Comparator.comparingInt(pokemon -> pokemon.getNextEvolution().size()))
@@ -121,8 +175,12 @@ public class PokemonController {
                 .orElse("");
     }
 
-    public List<String> evolutionNotFire() { //devuelve una lista con los nombres de los pokemon que evolucionan de
-                                        // otro pokemon que no sea de tipo fuego
+    /**
+     * Obtiene una lista de nombres de Pokémon que evolucionan pero no son de tipo "Fuego".
+     *
+     * @return Una lista de nombres de Pokémon con evolución que no son de tipo "Fuego".
+     */
+    public List<String> evolutionNotFire() {
         return pokedex.getPokemon().stream()
                 .filter(pokemon -> pokemon.getNextEvolution() != null)
                 .flatMap(pokemon -> pokemon.getNextEvolution().stream())
@@ -135,35 +193,62 @@ public class PokemonController {
                 .toList();
     }
 
-    public String heaviestPokemon() { //devuelve el nombre del pokemon más pesado
+    /**
+     * Obtiene el nombre del Pokémon más pesado en la Pokedex.
+     *
+     * @return El nombre del Pokémon más pesado.
+     */
+    public String heaviestPokemon() {
         return pokedex.getPokemon().stream()
                 .max(Comparator.comparingDouble(Pokemon::getWeight))
                 .map(pokemon -> pokemon.getName() + " " + pokemon.getWeight())
                 .orElse("");
     }
 
-    public String tallestPokemon() { //devuelve el nombre del pokemon más alto
+    /**
+     * Obtiene el nombre del Pokémon más alto en la Pokedex.
+     *
+     * @return El nombre del Pokémon más alto.
+     */
+    public String tallestPokemon() {
         return pokedex.getPokemon().stream()
                 .max(Comparator.comparingDouble(Pokemon::getHeight))
                 .map(pokemon -> pokemon.getName() + " " + pokemon.getHeight())
                 .orElse("");
     }
 
-    public String getLongestNamePokemon() { //devuelve el nombre del pokemon con el nombre más largo
+
+    /**
+     * Obtiene el nombre del Pokémon con el nombre más largo en la Pokedex.
+     *
+     * @return El nombre del Pokémon con el nombre más largo.
+     */
+    public String getLongestNamePokemon() {
         return pokedex.getPokemon().stream()
                 .max(Comparator.comparingInt(p -> p.getName().length()))
                 .map(Pokemon::getName)
                 .orElse("");
     }
 
-    public Double getAverageWeight() { //devuelve la media de peso de los pokemon
+
+    /**
+     * Obtiene el nombre del Pokémon con el nombre más largo en la Pokedex.
+     *
+     * @return El nombre del Pokémon con el nombre más largo.
+     */
+    public Double getAverageWeight() {
         return pokedex.getPokemon().stream()
                 .mapToDouble(Pokemon::getWeight)
                 .average()
                 .orElse(0.0);
     }
 
-    public Double getAverageHeight() { //devuelve la media de altura de los pokemon
+    /**
+     * Calcula la altura promedio de todos los Pokémon en la Pokedex.
+     *
+     * @return La altura promedio de los Pokémon.
+     */
+    public Double getAverageHeight() {
         return pokedex.getPokemon().stream()
                 .mapToDouble(Pokemon::getHeight)
                 .average()
@@ -171,7 +256,12 @@ public class PokemonController {
 
     }
 
-    public Double getAverageEvolution() { //devuelve la media de evoluciones de los pokemon
+    /**
+     * Calcula el promedio de la cantidad de evoluciones de los Pokémon en la Pokedex.
+     *
+     * @return El promedio de evoluciones de los Pokémon.
+     */
+    public Double getAverageEvolution() {
         return pokedex.getPokemon().stream()
                 .filter(pokemon -> pokemon.getNextEvolution() != null)
                 .mapToDouble(pokemon -> pokemon.getNextEvolution().size())
@@ -180,7 +270,12 @@ public class PokemonController {
 
     }
 
-    public Double getAverageWeaknesses() { //devuelve la media de debilidades de los pokemon
+    /**
+     * Calcula el promedio de la cantidad de debilidades de los Pokémon en la Pokedex.
+     *
+     * @return El promedio de debilidades de los Pokémon.
+     */
+    public Double getAverageWeaknesses() {
         return pokedex.getPokemon().stream()
                 .filter(pokemon -> pokemon.getWeaknesses() != null)
                 .mapToDouble(pokemon -> pokemon.getWeaknesses().size())
@@ -188,7 +283,12 @@ public class PokemonController {
                 .orElse(0.0);
     }
 
-    public List<String> getPokemonByType() { //devuelve una lista con los nombres de los pokemon agrupados por tipo
+    /**
+     * Obtiene una lista de tipos de Pokémon presentes en la Pokedex, junto con los nombres de los Pokémon de cada tipo.
+     *
+     * @return Una lista de tipos de Pokémon y los nombres de los Pokémon de cada tipo.
+     */
+    public List<String> getPokemonByType() {
         return pokedex.getPokemon().stream()
                 .filter(pokemon -> pokemon.getType() != null)
                 .flatMap(pokemon -> pokemon.getType().stream())
@@ -202,8 +302,12 @@ public class PokemonController {
                 .toList();
     }
 
-  public Map<String, List<String>> getPokemonByWeaknesses() { //devuelve un mapa con las debilidades de los pokemon
-                                                       // y los nombres de los pokemon que tienen esa debilidad
+    /**
+     * Obtiene un mapa que relaciona las debilidades de Pokémon con los nombres de los Pokémon que tienen cada debilidad.
+     *
+     * @return Un mapa que asocia debilidades con nombres de Pokémon.
+     */
+  public Map<String, List<String>> getPokemonByWeaknesses() {
         return pokedex.getPokemon().stream()
                 .filter(pokemon -> pokemon.getWeaknesses() != null)
                 .flatMap(pokemon -> pokemon.getWeaknesses().stream())
@@ -218,8 +322,12 @@ public class PokemonController {
                 ));
     }
 
-    public Map<Integer, List<String>> getPokemonByEvolutionNum() { //devuelve un mapa con el número de evoluciones de
-                                 // los pokemon y los nombres de los pokemon que tienen ese número de evoluciones
+    /**
+     * Obtiene un mapa que agrupa los Pokémon por la cantidad de evoluciones que tienen.
+     *
+     * @return Un mapa que agrupa Pokémon por cantidad de evoluciones.
+     */
+    public Map<Integer, List<String>> getPokemonByEvolutionNum() {
         return pokedex.getPokemon().stream()
                 .filter(pokemon -> pokemon.getNextEvolution() != null)
                 .collect(Collectors.groupingBy(
@@ -231,8 +339,12 @@ public class PokemonController {
                 ));
     }
 
-
-    public String mostCommonWeakness(){ //devuelve la debilidad que más se repite
+    /**
+     * Obtiene la debilidad más común entre los Pokémon de la Pokedex.
+     *
+     * @return La debilidad más común.
+     */
+    public String mostCommonWeakness(){
         return pokedex.getPokemon().stream()
                 .filter(pokemon -> pokemon.getWeaknesses() != null)
                 .flatMap(pokemon -> pokemon.getWeaknesses().stream())
@@ -247,20 +359,23 @@ public class PokemonController {
                 .orElse("");
     }
 
-    public void exportToCSV() { //exporta los datos de los pokemon a un fichero csv
+    /**
+     * Exporta los datos de Pokémon a un archivo CSV.
+     */
+    public void exportToCSV() {
         String content = "id;num;name;height;weight\n";
-        //pasamos los datos de los pokemon a un string y los guardamos en el fichero csv
         content += pokedex.getPokemon().stream().map(Pokemon::toCSV).collect(Collectors.joining("\n"));
         try {
-            //creamos el fichero csv en el directorio del proyecto
             Files.writeString(Paths.get(dir + File.separator + "pokemon.csv"), content);
         } catch (IOException e) {
-            //si no se puede crear el fichero, mostramos un mensaje de error
             throw new RuntimeException(e);
         }
     }
 
-    public void readCSV() { //mostamos los datos del fichero csv por pantalla
+    /**
+     * Lee los datos de Pokémon desde un archivo CSV.
+     */
+    public void readCSV() {
         try (Stream<String> stream = Files.lines(Paths.get(dir + File.separator + "pokemon.csv"))) {
             stream.skip(1).map(line -> line.split(";")).forEach(line -> {
                 System.out.println(Arrays.toString(line));
