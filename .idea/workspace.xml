@@ -9,9 +9,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8053052e-f744-4533-8fdd-851bb2ba3d12" name="Changes" comment="javadoc generado">
+    <list default="true" id="8053052e-f744-4533-8fdd-851bb2ba3d12" name="Changes" comment="Se corrigen los errores al generar el jar">
+      <change afterPath="$PROJECT_DIR$/images/img_1.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/PokemonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/PokemonController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/DataBaseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/DataBaseManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +138,7 @@
       <command value="gradle jar" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.practicaJson [jar]">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="ProyectoJson.main" />
@@ -228,9 +231,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.practicaJson [jar]" />
         <item itemvalue="Gradle.C:/Users/Eva/Documents/2daw/dwservidor/ProyectoJSON/practicaJson [jar]" />
         <item itemvalue="Gradle.practicaJson [clean]" />
-        <item itemvalue="Gradle.practicaJson [jar]" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JAR Application.ProyectoJson.jar" />
       </list>
@@ -377,7 +380,8 @@
     <MESSAGE value="Último métodos" />
     <MESSAGE value="jar generado" />
     <MESSAGE value="javadoc generado" />
-    <option name="LAST_COMMIT_MESSAGE" value="javadoc generado" />
+    <MESSAGE value="Se corrigen los errores al generar el jar" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se corrigen los errores al generar el jar" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ProyectoJson$PokemonControllerTest_onlyOneWeakness.ic" NAME="PokemonControllerTest.onlyOneWeakness Coverage Results" MODIFIED="1695291053324" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

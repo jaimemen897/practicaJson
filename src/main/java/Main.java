@@ -5,14 +5,15 @@ import services.PokedexManager;
 
 public class Main {
     public static void main(String[] args) {
-        PokedexManager pokedexManager = PokedexManager.getInstance(DataBaseManager.getInstance().getConnection());
+        DataBaseManager dataBaseManager = DataBaseManager.getInstance();
+        PokedexManager pokedexManager = PokedexManager.getInstance(dataBaseManager.getConnection());
         PokemonController pokemonController = PokemonController.getInstance();
 
         for (Pokemon pokemon : pokemonController.getPokedex().getPokemon()) {
             pokedexManager.save(pokemon);
         }
 
-        System.out.println("There are " + pokedexManager.findAll().size() + " pokemons in the database");
+        System.out.println("Hay " + pokedexManager.findAll().size() + " pokemons en la base de datos");
         System.out.println(pokedexManager.findByNombre("Pikachu"));
 
         System.out.println("Obtener el nombre de los 10 primeros pokemons");
