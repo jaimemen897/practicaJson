@@ -379,7 +379,7 @@ public class PokemonController {
         try (Stream<String> stream = Files.lines(Paths.get(dir + File.separator + "pokemon.csv"))) {
             stream.skip(1).map(line -> line.split(";")).forEach(line -> {
                 System.out.println(Arrays.toString(line));
-            });
+            }); 
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
