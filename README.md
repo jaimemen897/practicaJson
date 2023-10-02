@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Práctica Pokemons de Jaime Medina y Eva Gómez
 ## Funcionamiento principal
 
@@ -44,3 +45,6 @@ Para obtener la información filtrada que nos pide el ejercicio llamamos a los m
 Si todo es correcto nos debería aparecer esto al ejecutar y deberíamos de tener un csv nuevo llamado *pokemon.csv*:
 
 ![image](images/img.png)
+=======
+
+>>>>>>> origin/master
